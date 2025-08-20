@@ -7,7 +7,7 @@
 .yarn/install-state.gz
 
 .gitignore
-/portfolio
+/portfolio/
 
 # testing
 /coverage
