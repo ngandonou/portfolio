@@ -137,7 +137,7 @@ export const BentoGridItem = ({
           </div>
 
           {/* for the github 3d globe */}
-          {/* {id === 2 && <GridGlobe />} */}
+          {id === 2 && <GridGlobe />}
 
           {/* Tech stack list div */}
           {id === 3 && (
@@ -184,13 +184,15 @@ export const BentoGridItem = ({
                 <Lottie options={defaultOptions} height={200} width={400} />
               </div>
 
-              <MagicButton
-                title={copied ? "Email is Copied!" : "Copy my email address"}
-                icon={<IoCopyOutline />}
-                position="left"
-                handleClick={handleCopy}
-                otherClasses="bg-[#161A31]!"
-              />
+              <a href="mailto:gajonedev@gmail.com">
+                <MagicButton
+                  title="Envoyer un mail"
+                  icon={<IoCopyOutline />}
+                  position="left"
+                  // handleClick={handleCopy}
+                  otherClasses="bg-[#161A31]!"
+                />
+              </a>
             </div>
           )}
         </div>
