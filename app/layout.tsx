@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Lexend, Outfit } from "next/font/google";
 
 import "./globals.css";
 import { ThemeProvider } from "./provider";
+import { cn } from "@/lib/utils";
 
-const inter = Inter({ subsets: ["latin"] });
+const lexend = Lexend({ subsets: ["latin"], variable: "--font-lexend" });
+
+const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 
 export const metadata: Metadata = {
   title: "Adrian's Portfolio",
@@ -21,7 +24,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/jsm-logo.png" sizes="any" />
       </head>
-      <body className={inter.className}>
+      <body className={cn(lexend.className, outfit.className, "font-outfit")}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
